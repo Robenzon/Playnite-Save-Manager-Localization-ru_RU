@@ -1,0 +1,359 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+	<!-- General -->
+	<sys:String x:Key="LOCSaveManager">Менеджер сохранений</sys:String>
+	<sys:String x:Key="LOCSaveManagerSubtitle">Управление сохранениями</sys:String>
+	<sys:String x:Key="LOCSaveManagerGameId">ID игры: {0}</sys:String>
+	<sys:String x:Key="LOCSaveManagerConfigId">ID конфигурации: {0}</sys:String>
+	<sys:String x:Key="LOCSaveManagerMatchGame">Сопоставить сохранения</sys:String>
+	<sys:String x:Key="LOCSaveManagerMatchGameTooltip">Сопоставить эту игру с существующей конфигурацией облачных сохранений</sys:String>
+	
+	<!-- Save Path Config -->
+	<sys:String x:Key="LOCSaveManagerSaveConfigTitle">Настройка путей сохранений</sys:String>
+	<sys:String x:Key="LOCSaveManagerAddFolder">Добавить папку</sys:String>
+	<sys:String x:Key="LOCSaveManagerAddFolderTooltip">Добавить папку с сохранениями</sys:String>
+	<sys:String x:Key="LOCSaveManagerAddFile">Добавить файл</sys:String>
+	<sys:String x:Key="LOCSaveManagerAddFileTooltip">Добавить отдельный файл сохранения</sys:String>
+	<sys:String x:Key="LOCSaveManagerRemoveTooltip">Удалить</sys:String>
+	<sys:String x:Key="LOCSaveManagerNoSavePaths">Пути сохранений не настроены&#x0a;Пожалуйста, добавьте файлы или папки с помощью кнопок выше</sys:String>
+	<sys:String x:Key="LOCSaveManagerImportConfig">Импорт конфигурации</sys:String>
+	<sys:String x:Key="LOCSaveManagerImportConfigTooltip">Импортировать конфигурацию путей из других игр</sys:String>
+	<sys:String x:Key="LOCSaveManagerExportConfig">Экспорт конфигурации</sys:String>
+	<sys:String x:Key="LOCSaveManagerExportConfigTooltip">Экспортировать текущую конфигурацию путей</sys:String>
+	<sys:String x:Key="LOCSaveManagerSaveConfig">Сохранить конфигурацию</sys:String>
+
+	<!-- Backup Management -->
+	<sys:String x:Key="LOCSaveManagerBackupManagementTitle">Управление резервными копиями</sys:String>
+	<sys:String x:Key="LOCSaveManagerCreateNewBackup">Создать новую копию</sys:String>
+	<sys:String x:Key="LOCSaveManagerBackupNotePlaceholder">Введите заметку к копии (необязательно)</sys:String>
+	<sys:String x:Key="LOCSaveManagerImportBackupTooltip">Импортировать резервную копию из внешнего файла (ZIP)</sys:String>
+	<sys:String x:Key="LOCSaveManagerImportBackup">Импорт</sys:String>
+	<sys:String x:Key="LOCSaveManagerCreateBackup">Создать</sys:String>
+	<sys:String x:Key="LOCSaveManagerNoBackups">Нет доступных резервных копий&#x0a;Создайте свою первую копию после настройки путей сохранений</sys:String>
+
+	<!-- Backup Actions -->
+	<sys:String x:Key="LOCSaveManagerActionNote">Заметка</sys:String>
+	<sys:String x:Key="LOCSaveManagerActionNoteTooltip">Редактировать заметку для выбранной резервной копии</sys:String>
+	<sys:String x:Key="LOCSaveManagerActionRestore">Восстановить</sys:String>
+	<sys:String x:Key="LOCSaveManagerActionRestoreTooltip">Восстановить выбранную резервную копию</sys:String>
+	<sys:String x:Key="LOCSaveManagerActionDelete">Удалить</sys:String>
+	<sys:String x:Key="LOCSaveManagerActionDeleteTooltip">Удалить выбранную резервную копию</sys:String>
+	<sys:String x:Key="LOCSaveManagerOpenBackupFolder">Открыть папку</sys:String>
+	
+	<!-- Settings View -->
+	<sys:String x:Key="LOCSaveManagerSettingsTitle">Настройки Менеджера сохранений</sys:String>
+	<sys:String x:Key="LOCSaveManagerCustomBackupPath">Пользовательская папка для резервных копий:</sys:String>
+	<sys:String x:Key="LOCSaveManagerBrowse">Обзор...</sys:String>
+	<sys:String x:Key="LOCSaveManagerAutoBackup">Создавать резервную копию при выходе из игры</sys:String>
+	<sys:String x:Key="LOCSaveManagerConfirmBackup">Запрашивать подтверждение перед созданием копии</sys:String>
+	<sys:String x:Key="LOCSaveManagerMaxAutoBackupCount">Макс. количество автокопий:</sys:String>
+	<sys:String x:Key="LOCSaveManagerMaxAutoBackupCountTooltip">Максимальное количество автокопий на одну игру. При превышении старые копии будут автоматически удалены. 0 — без ограничений.</sys:String>
+	<sys:String x:Key="LOCSaveManagerMaxAutoBackupCountHint">(на игру, 0=без ограничений, удаляет самые старые)</sys:String>
+	<sys:String x:Key="LOCSaveManagerZipWarning">Примечание: Сохранения игр будут храниться в виде стандартных ZIP-архивов.</sys:String>
+	<sys:String x:Key="LOCSaveManagerSettingShowAutoBackupNotification">Показывать уведомление Windows после автокопирования</sys:String>
+	<sys:String x:Key="LOCSaveManagerAutoBackupNote">Автокопия после {0} мин. игрового процесса</sys:String>
+	<sys:String x:Key="LOCSaveManagerAutoBackupSuccess">[SaveManager] Создана автокопия для "{0}" — {1}</sys:String>
+	<sys:String x:Key="LOCSaveManagerAutoBackupCloudSuccess">[SaveManager] Автокопия для "{0}" создана и загружена в облако — {1}</sys:String>
+	<sys:String x:Key="LOCSaveManagerAutoBackupFailed">[SaveManager] Не удалось создать автокопию для "{0}": {1}</sys:String>
+	<sys:String x:Key="LOCSaveManagerToastBackupTitle">Менеджер сохранений — Копирование завершено</sys:String>
+	<sys:String x:Key="LOCSaveManagerToastBackupMessage">Создана резервная копия "{0}": {1}</sys:String>
+	<sys:String x:Key="LOCSaveManagerToastBackupErrorTitle">Менеджер сохранений — Ошибка копирования</sys:String>
+	<sys:String x:Key="LOCSaveManagerToastBackupErrorMessage">Не удалось создать копию для "{0}": {1}</sys:String>
+
+	<!-- Messages & Dialogs (C#) -->
+	<sys:String x:Key="LOCSaveManagerMsgSelectOneGame">Пожалуйста, выберите только одну игру для управления сохранениями.</sys:String>
+	<sys:String x:Key="LOCSaveManagerMsgSelectOneGameRestore">Пожалуйста, выберите только одну игру для восстановления.</sys:String>
+	<sys:String x:Key="LOCSaveManagerMenuQuickBackup">Быстрая резервная копия</sys:String>
+	<sys:String x:Key="LOCSaveManagerMenuQuickRestore">Быстрое восстановление (Последняя)</sys:String>
+	<sys:String x:Key="LOCSaveManagerMenuAbout">О Менеджере сохранений</sys:String>
+	<sys:String x:Key="LOCSaveManagerAboutContent">Менеджер сохранений v1.0.3
+	
+Плагин Playnite для управления резервными копиями сохранений игры.
+	
+Особенности:
+• Настройте пути сохранения (папки и файлы) для каждой игры
+• Создавайте резервные копии сохранений (в формате ZIP)
+• Добавляйте примечания к резервным копиям
+• Восстановление из любой резервной копии в один клик
+
+Использование: Клик правой кнопкой по игре -> Save Manager -> Управление сохранениями</sys:String>
+    <sys:String x:Key="LOCSaveManagerWindowTitle">Менеджер сохранений — {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgNoConfig">Для игры "{0}" не настроены пути сохранений.&#x0a;&#x0a;Хотите настроить их сейчас?</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleNoConfig">Нет путей сохранений</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmBackup">Вы уверены, что хотите создать резервную копию для "{0}"?</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleConfirmBackup">Подтверждение копирования</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleBackupNote">Заметка к копии</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleQuickBackup">Быстрая резервная копия</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgBackupSuccess">Резервная копия успешно создана!&#x0a;&#x0a;Имя файла: {0}&#x0a;Размер: {1}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgNoBackups">Для игры "{0}" нет доступных резервных копий.</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleNoBackups">Нет резервных копий</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmQuickRestore">Вы уверены, что хотите восстановить последнюю резервную копию?&#x0a;&#x0a;Название копии: {0}&#x0a;Дата: {1}&#x0a;Заметка: {2}&#x0a;&#x0a;⚠️ Это действие перезапишет ваши текущие файлы сохранений!</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleConfirmRestore">Подтверждение восстановления</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgRestoreSuccess">Резервная копия успешно восстановлена!</sys:String>
+    <sys:String x:Key="LOCSaveManagerDialogSelectFolder">Пожалуйста, выберите папку с сохранениями</sys:String>
+    <sys:String x:Key="LOCSaveManagerDialogSelectFile">Выберите файл(ы) для резервного копирования</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPathExists">Этот путь уже добавлен.</sys:String>
+    <sys:String x:Key="LOCSaveManagerDialogImportConfig">Файл конфигурации (*.json)|*.json</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgImportConfirm">Из файла импортировано путей: {0}.&#x0a;Это перезапишет текущую конфигурацию. Продолжить?</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleConfirmImport">Подтверждение импорта</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgImportSuccess">Конфигурация успешно импортирована. Не забудьте сохранить изменения.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgInvalidConfig">Неверный формат файла конфигурации.</sys:String>
+    <sys:String x:Key="LOCSaveManagerDialogExportConfig">Экспорт конфигурации путей сохранений</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgExportNoPaths">Нет настроенных путей для экспорта.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgExportSuccess">Конфигурация успешно экспортирована в:&#x0a;{0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerDialogImportBackup">Файл резервной копии (*.zip)|*.zip</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgImportBackupSuccess">Резервная копия успешно импортирована!&#x0a;Имя файла: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgImportMultipleBackupsSuccess">Успешно импортировано файлов резервных копий: {0}!</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfigSaved">Конфигурация путей сохранений сохранена.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfigRequired">Пожалуйста, сначала настройте пути сохранений.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmRestoreNamed">Вы уверены, что хотите восстановить резервную копию "{0}"?&#x0a;&#x0a;Это перезапишет текущие файлы сохранений!&#x0a;&#x0a;Рекомендуется сначала сделать резервную копию текущих сохранений.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmDelete">Вы уверены, что хотите удалить резервную копию "{0}"?&#x0a;&#x0a;Это действие невозможно отменить!</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmDeleteMultiple">Вы уверены, что хотите удалить выбранные резервные копии ({0} шт.)?&#x0a;&#x0a;Это действие невозможно отменить!</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleConfirmDelete">Подтверждение удаления</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDeleteSuccess">Резервная копия удалена.</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleEditNote">Редактирование заметки</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgEnterNote">Введите новую заметку:</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgNoteSuccess">Заметка успешно обновлена.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgAutoBackupNoteWarning">После редактирования заметки эта копия превратится в созданную вручную. Она больше не будет учитываться в лимите автоматических копий и не удалится автоматически.</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleAutoBackupNoteWarning">Внимание</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgBackupsNotFound">Для этой игры не найдено резервных копий.</sys:String>
+
+    <!-- Menu Items -->
+    <sys:String x:Key="LOCSaveManagerMenuSection">SaveManager</sys:String>
+    <sys:String x:Key="LOCSaveManagerMenuRestoreBackup">Восстановить резервную копию</sys:String>
+    <sys:String x:Key="LOCSaveManagerMenuViewAllBackups">Посмотреть все резервные копии...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMenuExportGlobalConfig">Экспорт глобальной конфигурации</sys:String>
+    <sys:String x:Key="LOCSaveManagerMenuImportGlobalConfig">Импорт глобальной конфигурации</sys:String>
+    
+    <!-- Global Config Import/Export -->
+    <sys:String x:Key="LOCSaveManagerGlobalExportSuccess">Глобальная конфигурация успешно экспортирована в:&#x0a;{0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerGlobalImportWarning">Предупреждение: Это полностью перезапишет текущую конфигурацию SaveManager!
+
+Будут импортированы все пути сохранений игр и настройки резервного копирования.
+
+При переносе конфигурации на другое устройство пути могут не совпадать, что может привести к:
+• Отображению пустых/ошибочных записей резервных копий
+• Некорректным путям к сохранениям игр
+
+Вы уверены, что хотите продолжить?</sys:String>
+    <sys:String x:Key="LOCSaveManagerGlobalImportTitle">Импорт глобальной конфигурации</sys:String>
+    <sys:String x:Key="LOCSaveManagerGlobalImportSuccess">Глобальная конфигурация успешно импортирована!&#x0a;&#x0a;Пожалуйста, перезапустите Playnite, чтобы изменения вступили в силу.</sys:String>
+
+    <!-- Cloud Sync -->
+    <sys:String x:Key="LOCSaveManagerMsgSaveConflictOptions">Обнаружен конфликт сохранений!&#x0a;&#x0a;Локальное сохранение: {0}, размер: {1}&#x0a;Облачное сохранение: {2}, размер: {3}&#x0a;&#x0a;Пожалуйста, выберите действие:</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgNewest"> (Новее)</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgRecommended"> (Рекомендуется)</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnPullCloud">Скачать из облака</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnKeepLocalAndPush">Оставить локальное и отправить в облако</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnCancel">Отмена</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPushingLocal">Отправка локального сохранения в облако...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgLocalPushed">Локальное сохранение отправлено в облако!</sys:String>
+
+    <!-- Delete data buttons -->
+    <sys:String x:Key="LOCSaveManagerDeleteLocalData">Удалить локальные данные</sys:String>
+    <sys:String x:Key="LOCSaveManagerDeleteLocalDataTooltip">Удалить все локальные резервные копии и данные конфигурации</sys:String>
+    <sys:String x:Key="LOCSaveManagerDeleteCloudData">Удалить облачные данные</sys:String>
+    <sys:String x:Key="LOCSaveManagerDeleteCloudDataTooltip">Удалить все резервные копии из облака</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmDeleteCloudData">Вы уверены, что хотите удалить все резервные копии из облака?&#x0a;&#x0a;Это действие невозможно отменить!</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDeletingCloudData">Удаление облачных данных...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDeleteCloudDataSuccess">Облачные данные успешно удалены!</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDeleteCloudDataFailed">Не удалось удалить облачные данные</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudNotEnabled">Синхронизация с облаком не включена</sys:String>
+
+    <!-- Open folder -->
+    <sys:String x:Key="LOCSaveManagerOpenFolderTooltip">Открыть в Проводнике</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgFolderNotFound">Папка не найдена</sys:String>
+
+    <!-- Game Matching -->
+    <sys:String x:Key="LOCSaveManagerGameMatching">Сопоставление игр</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingTooltip">Управление связями между облачными папками и локальными играми</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingTitleSimple">Обнаружены несопоставленные облачные копии</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingDescSimple">Существуют папки облачных копий для игр, не связанных с вашей библиотекой. Вы можете сопоставить их вручную.</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingTitleFull">Облачные папки — Управление сопоставлением игр</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingTitleSingle">Сопоставить конфигурацию сохранений для этой игры</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingDescFull">Ниже приведены все папки облачных копий. Вы можете связать их с локальными играми или удалить ненужные облачные конфигурации.</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingStatus">Статус: Несопоставлено — {0} / Сопоставлено — {1}</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingColConfig">Конфигурация облачной игры</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingColStatus">Статус сопоставления</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingColMatch">Сопоставленная локальная игра</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingAutoMatch">Попробовать автосопоставление</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingPrompt">Пожалуйста, выберите подходящую игру для сопоставления</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingClearMatch">Сбросить сопоставление</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingSaveSuccess">Сопоставление успешно выполнено!</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingDeleteConfigTooltip">Удалить эту папку конфигурации из облака</sys:String>
+    <sys:String x:Key="LOCSaveManagerGameMatchingDeleteConfigConfirm">Вы уверены, что хотите удалить облачную папку "{0}"?&#x0a;&#x0a;ВНИМАНИЕ: Это навсегда удалит ВСЕ облачные копии для этой игры! Данное действие невозможно отменить.</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleGameMatchingNew">В облаке обнаружены новые резервные копии игр</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfigSyncFailed">Ошибка синхронизации конфигурации: {0}</sys:String>
+	
+    <!-- Cloud Sync Settings -->
+    <sys:String x:Key="LOCSaveManagerCloudSync">Облачная синхронизация</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleCloudSync">☁️ Облачная синхронизация</sys:String>
+    <sys:String x:Key="LOCSaveManagerEnableCloudSync">Включить облачную синхронизацию (Rclone)</sys:String>
+    <sys:String x:Key="LOCSaveManagerEnableCloudSyncTooltip">Включить синхронизацию резервных копий с облаком с помощью Rclone</sys:String>
+    <sys:String x:Key="LOCSaveManagerConfigureCloud">Настроить облако</sys:String>
+    <sys:String x:Key="LOCSaveManagerConfigureCloudTooltip">Настроить подключение к облачному сервису</sys:String>
+    <sys:String x:Key="LOCSaveManagerCloudProvider">Облачный провайдер:</sys:String>
+    <sys:String x:Key="LOCSaveManagerCloudProviderTooltip">Выберите провайдера облачного хранилища для синхронизации</sys:String>
+    <sys:String x:Key="LOCSaveManagerVerifyCloud">Проверить подключение</sys:String>
+    <sys:String x:Key="LOCSaveManagerVerifyCloudTooltip">Проверить статус подключения к облачному сервису</sys:String>
+    <sys:String x:Key="LOCSaveManagerSyncConfigNow">Синхронизировать конфиг сейчас</sys:String>
+    <sys:String x:Key="LOCSaveManagerSyncConfigNowTooltip">Немедленно загрузить и объединить конфигурацию из облака</sys:String>
+    <sys:String x:Key="LOCSaveManagerVerifyCloudBackups">Проверить облачные копии</sys:String>
+    <sys:String x:Key="LOCSaveManagerVerifyCloudBackupsTooltip">Проверить, все ли файлы резервных копий в облаке существуют и исправны</sys:String>
+    <sys:String x:Key="LOCSaveManagerReupload">Перезаписать в облаке</sys:String>
+    <sys:String x:Key="LOCSaveManagerReuploadTooltip">Повторно загрузить выбранную резервную копию в облако</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgReuploadConfirm">Эта резервная копия уже есть в облаке. Повторная загрузка перезапишет облачный файл.&#x0a;&#x0a;Продолжить?</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgVerifyingBackups">Проверка облачных копий... ({0}/{1})</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgAllBackupsValid">Все облачные резервные копии исправны! Проверено файлов копий: {0}.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgInvalidBackupsFound">Найдено поврежденных копий ({0} шт.):&#x0a;&#x0a;{1}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgNoCloudBackups">Пути к облачным копиям не найдены.</sys:String>
+    <sys:String x:Key="LOCSaveManagerPullAllData">Скачать все данные (кроме последней копии)</sys:String>
+    <sys:String x:Key="LOCSaveManagerPullAllDataTooltip">Скачать все конфигурации и резервные копии из облака (используйте с осторожностью)</sys:String>
+    <sys:String x:Key="LOCSaveManagerPushAllData">Отправить все данные в облако</sys:String>
+    <sys:String x:Key="LOCSaveManagerPushAllDataTooltip">Загрузить все локальные конфигурации и резервные копии в облако</sys:String>
+    
+    <!-- Real-time Sync -->
+    <sys:String x:Key="LOCSaveManagerRealtimeSync">Включить отслеживание версий сохранений и автосоздание последней копии</sys:String>
+    <sys:String x:Key="LOCSaveManagerRealtimeSyncTooltip">Автоматически создавать снимок последней версии сохранения после закрытия игры и загружать в облако (если включена облачная синхронизация)</sys:String>
+    <sys:String x:Key="LOCSaveManagerRealtimeSyncDescription">Автоматически отслеживать версии сохранений и синхронизировать с облаком</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDisableRealtimeSyncWarning">Отключение отслеживания версий нарушит корректную работу облачной синхронизации. Сохранения, созданные после этого, могут часто приводить к конфликтам при восстановлении, даже если облачная синхронизация будет включена позже. Если вам нужна облачная синхронизация сейчас или в будущем, настоятельно рекомендуется НЕ отключать эту функцию!</sys:String>
+    <sys:String x:Key="LOCSaveManagerSyncConfigOnGameStart">Синхронизировать конфиг при каждом запуске игры</sys:String>
+    <sys:String x:Key="LOCSaveManagerSyncConfigOnGameStartTooltip">Перед каждым запуском игры загружать актуальный файл конфигурации из облака для поддержания синхронизации с другими устройствами</sys:String>
+
+    <!-- Cross Device Management -->
+    <sys:String x:Key="LOCSaveManagerDataManagement">Управление данными</sys:String>
+    <sys:String x:Key="LOCSaveManagerCrossDeviceManagement">Межустройственное управление</sys:String>
+    <sys:String x:Key="LOCSaveManagerGlobalExport">Экспортировать глобальный пакет данных</sys:String>
+    <sys:String x:Key="LOCSaveManagerGlobalExportTooltip">Экспортировать все данные для переноса на новое устройство</sys:String>
+    <sys:String x:Key="LOCSaveManagerGlobalImport">Импортировать глобальный пакет данных</sys:String>
+    <sys:String x:Key="LOCSaveManagerGlobalImportTooltip">Восстановить данные плагина из пакета</sys:String>
+    <sys:String x:Key="LOCSaveManagerDangerZone">⚠️ Опасная зона</sys:String>
+    <sys:String x:Key="LOCSaveManagerDeleteAllData">Удалить все данные</sys:String>
+    <sys:String x:Key="LOCSaveManagerDeleteAllDataTooltip">Удалить все локальные копии и конфигурации (сброс плагина)</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmDeleteAllData">Внимание: Вы уверены, что хотите удалить все локальные данные?&#x0a;&#x0a;Это действие:&#x0a;1. Удалит все файлы локальных резервных копий&#x0a;2. Очистит все настройки путей сохранений&#x0a;3. Сбросит настройки плагина&#x0a;&#x0a;Это действие невозможно отменить! Рекомендуется сначала экспортировать глобальную конфигурацию.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDeleteAllDataFailed">Не удалось удалить все данные</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDeleteAllDataSuccessRestart">Все данные удалены. Для завершения сброса необходимо перезапустить Playnite.&#x0a;&#x0a;Нажмите ОК для перезапуска Playnite.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmPushAllData">Вы уверены, что хотите отправить все локальные данные в облако?&#x0a;&#x0a;Это приведет к загрузке конфигураций и последних резервных копий для всех игр. Существующие файлы в облаке будут перезаписаны.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmPullAllData">Внимание: Вы уверены, что хотите скачать все данные из облака?&#x0a;&#x0a;Это действие:&#x0a;1. Загрузит конфигурации для всех игр&#x0a;2. Перезапишет существующие локальные конфигурации&#x0a;&#x0a;Рекомендуется сначала выполнить «Отправить все данные в облако», чтобы сделать резервную копию текущего состояния.</sys:String>
+
+	<!-- Errors & Status Messages -->
+    <sys:String x:Key="LOCSaveManagerError">Ошибка</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgRcloneNotInstalled">Rclone не обнаружен. Вам необходимо скачать Rclone для использования облачной синхронизации.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgInstallRclone">Скачать Rclone</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgRcloneInstalling">Скачивание Rclone, пожалуйста, подождите...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgRcloneInstalled">Rclone успешно установлен!</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgRcloneInstallFailed">Не удалось установить Rclone. Проверьте сеть или попробуйте установить вручную.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfigureCloud">Мастер настройки откроется в терминале. Следуйте подсказкам для авторизации.&#x0a;&#x0a;После завершения нажмите "Проверить подключение".</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfiguringCloud">Открытие мастера настройки Rclone...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudConfigured">Похоже, облачный сервис настроен. Пожалуйста, нажмите "Проверить подключение".</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudConfigFailed">Не удалось запустить мастер настройки облака.</sys:String>
+     <sys:String x:Key="LOCSaveManagerMsgVerifyingCloud">Проверка подключения к облаку...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConnectionSuccess">Успешно подключено! Облачная синхронизация готова.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConnectionFailed">Ошибка подключения. Проверьте конфигурацию или сеть.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgInitializingCloud">Инициализация службы облачной синхронизации...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCreatingBackup">Создание резервной копии...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgRestoringBackup">Восстановление резервной копии...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPushingData">Отправка данных в облако...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPushingProgress">Отправка ({0}/{1})</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPushDataSuccess">Данные успешно отправлены! Загружено резервных копий: {0}.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPullingData">Получение данных из облака...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPullDataSuccessDetail">Успешно скачано: конфигураций — {0}, копий — {1}.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPullDataFailed">Не удалось скачать данные</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgGameDirNotAvailable">Директория игры недоступна (игра не установлена?)</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudHasDataOptions">Для этой игры найдены облачные данные. Выберите действие:</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnPullConfigOnly">Скачать только конфиг (Рекомендуется)</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPullingConfigOnly">Скачивание конфигурации...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPullConfigSuccess">Конфигурация успешно скачана!</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnSkipPull">Пропустить</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgBackupExists">Резервная копия уже существует: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudNotConfigured">Облачный сервис не настроен</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgNoBackupOnCloud">Нет резервных копий в облаке</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDownloadingBackup">Скачивание резервной копии...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDownloadBackupFailed">Не удалось скачать резервную копию</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDownloadFailed">Не удалось скачать резервную копию из облака</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudSyncNotEnabled">Синхронизация с облаком не включена</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgUploadingBackups">Загрузка очереди резервных копий...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudUploadSuccess">Успешная загрузка в облако ({0})</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgSyncingConfig">Синхронизация конфигурации SaveManager...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgSyncConfigSuccess">Конфигурация успешно синхронизирована</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudSyncDisabled">Синхронизация с облаком не включена</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPullingLatest">Загрузка и восстановление последнего сохранения...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgFirstSyncComplete">Первая отправка завершена</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmFirstSync">Файл конфигурации отправлен в облако. Отправить все резервные копии сейчас? (Первая отправка может занять некоторое время)&#x0a;&#x0a;Вы также можете вручную нажать кнопку "Отправить все данные в облако" позже.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgRealtimeSyncCreated">Создан снимок синхронизации в реальном времени: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudSyncPulled">Сохранения восстановлены из облака</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudSyncPullFailed">Не удалось получить облачное сохранение: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudConnectionFailed">Ошибка подключения к облаку или истекло время ожидания, пожалуйста, проверьте сеть</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnRetry">Повторить</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnIgnore">Игнорировать</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCannotDeleteLatest">"Последняя копия" является снимком синхронизации в реальном времени и не может быть удалена.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCannotEditLatest">"Последняя копия" является снимком синхронизации в реальном времени, её заметку нельзя изменить.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCheckingCloudFiles">Проверка облачных файлов...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDeletingCloudFolder">Удаление облачной папки "{0}" ({1}/{2})...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudDeleteFailed">Не удалось удалить облачную папку: {0}</sys:String>
+    
+    <!-- Excludes -->
+    <sys:String x:Key="LOCSaveManagerRestoreExcludeTitle">Исключения при восстановлении</sys:String>
+    <sys:String x:Key="LOCSaveManagerRestoreExcludeTitleExpanded">▼ Исключения при восстановлении</sys:String>
+    <sys:String x:Key="LOCSaveManagerRestoreExcludeHint">Файлы/папки в этом списке НЕ будут перезаписаны во время восстановления.</sys:String>
+    <sys:String x:Key="LOCSaveManagerRestoreExcludeEmpty">Нет исключений</sys:String>
+    <sys:String x:Key="LOCSaveManagerAddExcludeFolder">Исключить папку</sys:String>
+    <sys:String x:Key="LOCSaveManagerAddExcludeFolderTooltip">Добавить папку для игнорирования при восстановлении</sys:String>
+    <sys:String x:Key="LOCSaveManagerAddExcludeFile">Исключить файл</sys:String>
+    <sys:String x:Key="LOCSaveManagerAddExcludeFileTooltip">Добавить файл для игнорирования при восстановлении</sys:String>
+
+    <!-- Force Restore -->
+    <sys:String x:Key="LOCSaveManagerForceRestore">Принудительное восстановление</sys:String>
+    <sys:String x:Key="LOCSaveManagerForceRestoreTooltip">Игнорировать все исключения и принудительно перезаписать все файлы</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfirmForceRestore">Внимание: Принудительное восстановление перезапишет ВСЕ файлы, включая те, что находятся в списке исключений.&#x0a;&#x0a;Вы уверены, что хотите продолжить?</sys:String>
+
+    <sys:String x:Key="LOCSaveManagerBtnSave">Сохранить</sys:String>
+
+	<!-- Missing keys -->
+    <sys:String x:Key="LOCSaveManagerTitleWarning">Внимание</sys:String>
+    <sys:String x:Key="LOCSaveManagerTitleSaveConflict">Конфликт сохранений</sys:String>
+    <sys:String x:Key="LOCSaveManagerOpenDataFolder">Открыть папку данных</sys:String>
+    <sys:String x:Key="LOCSaveManagerOpenDataFolderTooltip">Открыть папку, где хранятся данные резервных копий</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnPullAllData">Скачать данные</sys:String>
+
+    <!-- Restore and update Latest -->
+    <sys:String x:Key="LOCSaveManagerMsgRestoreUpdateLatest">Восстановление прошло успешно!&#x0a;&#x0a;Хотите установить эту версию как текущую и отправить её в облако?&#x0a;&#x0a;Если этого не сделать, при следующем запуске игры облачная синхронизация может перезаписать восстановленные файлы.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgUpdatingLatest">Обновление и отправка в облако...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgUpdatingLatestLocal">Обновление локальной записи версии...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgLatestUpdated">Версия установлена как текущая и отправлена в облако!</sys:String>
+
+    <!-- Cloud sync operations -->
+    <sys:String x:Key="LOCSaveManagerMsgSyncingToCloud">Синхронизация с облаком...</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgUploadingToCloud">Загрузка в облако: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgDeletingFromCloud">Удаление из облака: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerBtnBackgroundSync">Фоновая синхронизация</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgBackgroundSyncStarted">Синхронизация продолжится в фоновом режиме</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudSyncComplete">Синхронизация с облаком завершена</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgBackupUploadComplete">Резервная копия загружена в облако: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgBackupDeleteComplete">Резервная копия удалена из облака: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgCloudSyncFailed">Ошибка облачной синхронизации: {0}</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgWaitingForTasks">Ожидание завершения автокопирования SaveManager или фоновых задач облачной синхронизации...</sys:String>
+
+    <!-- Cloudflare R2 Configuration -->
+    <sys:String x:Key="LOCSaveManagerMsgEnterR2AccountId">Введите ID аккаунта Cloudflare:&#x0a;&#x0a;(Его можно найти в панели Cloudflare Dashboard > R2 > Overview, с правой стороны)</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgEnterR2AccessKey">Введите Access Key ID для R2:&#x0a;&#x0a;(Создайте его в разделе R2 > Manage R2 API Tokens)</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgEnterR2SecretKey">Введите Secret Access Key для R2:</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgEnterR2Bucket">Введите имя бакета (Bucket) R2:&#x0a;&#x0a;(Сначала вам нужно создать этот бакет в панели Cloudflare R2)</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgR2ConfigSuccess">Cloudflare R2 успешно настроен!&#x0a;&#x0a;Ваши сохранения будут синхронизироваться в папку PlayniteSaveManager в бакете "{0}".</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfigSuccess">Настройка успешно завершена</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgConfigFailed">Ошибка настройки</sys:String>
+
+    <!-- WebDAV General -->
+    <sys:String x:Key="LOCSaveManagerMsgWebDAVUsername">Аккаунт</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgWebDAVPassword">Пароль</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgPasswordEncryptFailed">Не удалось зашифровать пароль. Пожалуйста, попробуйте еще раз.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgEnterWebDAVUrl">Введите полный URL-адрес сервера WebDAV:</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgEnterWebDAVUsername">Введите аккаунт WebDAV:</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgEnterWebDAVPassword">Введите пароль WebDAV (некоторые сервисы требуют создания пароля приложения):</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgWebDAVConfigSuccess">WebDAV успешно настроен!&#x0a;&#x0a;URL сервера: {0}&#x0a;Ваши сохранения будут синхронизироваться в папку PlayniteSaveManager.</sys:String>
+    <sys:String x:Key="LOCSaveManagerMsgWebDAVConfigFailed">Не удалось настроить WebDAV. Пожалуйста, проверьте URL-адрес сервера и учетные данные.</sys:String>
+
+</ResourceDictionary>
+
